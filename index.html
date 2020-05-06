@@ -10,7 +10,67 @@
     <meta content="http://https://donaldtrump.com/" property="og:url">
     <meta content="website" property="og:type">
     <link rel="stylesheet" href="https://volodymyrkushnir.com/assets/stylesheets/base.css">
-
+    <style>
+      .contacts li a.twitter:hover {
+          color: #00aff0;
+      }
+      .contacts li a.instagram:hover {
+          color: #6b5926;
+      }
+      /* Tags */
+      [data-tag] > *:first-child:after {
+        font-size: 0.6em;
+        line-height: 1rem;
+        letter-spacing: 0.5px;
+        text-transform: uppercase;
+        display: inline-block;
+        padding: 0em 0.75em;
+        border-radius: 15px;
+        height: 1rem;
+        margin-left: 0.5em;
+        margin-top: -1px;
+        vertical-align: middle;
+        box-shadow: inset 0 0 0 1px;
+        opacity: 0.5;
+        transition: opacity 0.2s linear;
+      }
+      [data-tag]:hover > *:first-child:after {
+        color: #ffffff;
+        opacity: 1;
+        box-shadow: none;
+      }
+      [data-tag="book"] > *:first-child:after { content: "book"; }
+      [data-tag="political"] > *:first-child:after { content: "political"; }
+      [data-tag="TV"] > *:first-child:after { content: "TV"; }
+      [data-tag="award"] > *:first-child:after { content: "award"; }
+      [data-tag="book"]:hover > *:first-child:after { background: blueviolet; }
+      [data-tag="political"]:hover > *:first-child:after { background: midnightblue; }
+      [data-tag="TV"]:hover > *:first-child:after { background: red; }
+      [data-tag="award"]:hover > *:first-child:after { background: goldenrod; }
+      .events > .details > label {
+        font-size: 0.75rem;
+        font-weight: bold;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+      }
+      .events > .details > input:after {
+        font-size: 0.75rem;
+      }
+      .events > .details:last-child > div {
+        margin-bottom: 0.25em;
+      }
+      .year .timeline li {
+        cursor: default;
+        padding: 0.5em;
+        margin: 0 0 0 -0.5em;
+        position: relative;
+        border-radius: 4px;
+        transition: all 0.2s linear;
+      }
+      .year .timeline li:hover {
+        background: #f1f1f1;
+      }
+  </style>
   </head>
   <body>
     <main>
@@ -23,7 +83,6 @@
                   <div class="avatar-wrapper">
                     <object class="avatar" data="./assets/images/avatar.png" role="img" aria-label="My profile picture"></object>
                   </div>
-                  </svg>
                 </div>
               </div>
               <div class="thirteen wide column">
@@ -32,14 +91,6 @@
                     <h1 class = "name">Donald Trump</h1>
                     <div class = "job">President of United States of America</div>
                     <ul class="contacts">
-                      <style>
-                        .contacts li a.twitter:hover {
-                          color: #00aff0;
-                        }
-                        .contacts li a.instagram:hover {
-                          color: #6b5926;
-                        }
-                      </style>
                       <li>
                         <a href="https://www.fb.com/DonaldTrump" rel="author" class="facebook">
                           <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M448 56.7v398.5c0 13.7-11.1 24.7-24.7 24.7H309.1V306.5h58.2l8.7-67.6h-67v-43.2c0-19.6 5.4-32.9 33.5-32.9h35.8v-60.5c-6.2-.8-27.4-2.7-52.2-2.7-51.6 0-87 31.5-87 89.4v49.9h-58.4v67.6h58.4V480H24.7C11.1 480 0 468.9 0 455.3V56.7C0 43.1 11.1 32 24.7 32h398.5c13.7 0 24.8 11.1 24.8 24.7z"/></svg>
@@ -81,38 +132,6 @@
                 <div class="fat divider"></div>
               </div>
             </div>
-            <style>
-              /* Tags */
-              [data-tag] > *:first-child:after {
-                font-size: 0.6em;
-                line-height: 1rem;
-                letter-spacing: 0.5px;
-                text-transform: uppercase;
-                display: inline-block;
-                padding: 0em 0.75em;
-                border-radius: 15px;
-                height: 1rem;
-                margin-left: 0.5em;
-                margin-top: -1px;
-                vertical-align: middle;
-                box-shadow: inset 0 0 0 1px;
-                opacity: 0.5;
-                transition: opacity 0.2s linear;
-              }
-              [data-tag]:hover > *:first-child:after {
-                color: #ffffff;
-                opacity: 1;
-                box-shadow: none;
-              }
-              [data-tag="book"] > *:first-child:after { content: "book"; }
-              [data-tag="political"] > *:first-child:after { content: "political"; }
-              [data-tag="TV"] > *:first-child:after { content: "TV"; }
-              [data-tag="award"] > *:first-child:after { content: "award"; }
-              [data-tag="book"]:hover > *:first-child:after { background: blueviolet; }
-              [data-tag="political"]:hover > *:first-child:after { background: midnightblue; }
-              [data-tag="TV"]:hover > *:first-child:after { background: red; }
-              [data-tag="award"]:hover > *:first-child:after { background: goldenrod; }
-            </style>
             <div class="row">
               <div class="ten wide column">
                 <h3>Experience</h3>
@@ -148,35 +167,10 @@
                   </li>
                 </ul>
                 <h6>Back then</h6>
-                <style>
-                  .events > .details > label {
-                    font-size: 0.75rem;
-                    font-weight: bold;
-                    letter-spacing: 0.15em;
-                    text-transform: uppercase;
-                  }
-                  .events > .details > input:after {
-                    font-size: 0.75rem;
-                  }
-                  .events > .details:last-child > div {
-                    margin-bottom: 0.25em;
-                  }
-                  .year .timeline li {
-                    cursor: default;
-                    padding: 0.5em;
-                    margin: 0 0 0 -0.5em;
-                    position: relative;
-                    border-radius: 4px;
-                    transition: all 0.2s linear;
-                  }
-                  .year .timeline li:hover {
-                    background: #f1f1f1;
-                  }
-                </style>
                 <ul class = "timeline">
                 <li class="details">
-                  <input type="checkbox" id="90-s">
-                  <label for="90-s" class="summary">1989-1999</label>
+                  <input type="checkbox" id="90">
+                  <label for="90" class="summary">1989-1999</label>
                   <div class ="year">
                     <ul class="timeline">
                       <li data-tag="political">
@@ -231,6 +225,7 @@
                         <p><em>1980</em></p>
                         <p>Started developing the Trump Tower skyscraper in Manhattan, I payed a crew of undocumented Polish workers to demolish the historic Bonwit Teller store, including art deco features. All this to make architectural critic Paul Goldberger say in 1983 that the tower's atrium is "the most pleasant interior public space to be completed in New York in some years". At the same time I also started a repair job on the Wollman Rink in Central Park and completed the work in three months for $1.95 million, which was $775,000 less than the initial budget!</p>
                       </li>
+                    </ul>
                   </div>
                 </li>
                 <li class="details">

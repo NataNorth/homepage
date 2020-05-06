@@ -74,24 +74,56 @@
                 <div class="fat divider"></div>
               </div>
             </div>
+            <style>
+              /* Tags */
+              [data-tag] > *:first-child:after {
+                font-size: 0.6em;
+                line-height: 1rem;
+                letter-spacing: 0.5px;
+                text-transform: uppercase;
+                display: inline-block;
+                padding: 0em 0.75em;
+                border-radius: 15px;
+                height: 1rem;
+                margin-left: 0.5em;
+                margin-top: -1px;
+                vertical-align: middle;
+                box-shadow: inset 0 0 0 1px;
+                opacity: 0.5;
+                transition: opacity 0.2s linear;
+              }
+              [data-tag]:hover > *:first-child:after {
+                color: #ffffff;
+                opacity: 1;
+                box-shadow: none;
+              }
+              [data-tag="book"] > *:first-child:after { content: "book"; }
+              [data-tag="political"] > *:first-child:after { content: "political"; }
+              [data-tag="TV"] > *:first-child:after { content: "TV"; }
+              [data-tag="award"] > *:first-child:after { content: "award"; }
+              [data-tag="book"]:hover > *:first-child:after { background: blueviolet; }
+              [data-tag="political"]:hover > *:first-child:after { background: midnightblue; }
+              [data-tag="TV"]:hover > *:first-child:after { background: red; }
+              [data-tag="award"]:hover > *:first-child:after { background: goldenrod; }
+            </style>
             <div class="row">
               <div class="ten wide column">
                 <h3>Experience</h3>
                 <h6>Resent</h6>
                 <ul class="timeline">
-                  <li>
+                  <li data-tag="political">
                     <p><em>2017</em></p>
                     <p>Became 45th president of the United States</p>
                   </li>
-                  <li>
+                  <li data-tag="political">
                     <p><em>2016</em></p>
                     <p>Won election race with 77 votes more than Clinton, yippe-kee-yay!</p>
                   </li>
-                  <li>
+                  <li data-tag="political">
                     <p><em>2015</em></p>
                     <p>Became the most important Republican nominating for presidential election run</p>
                   </li>
-                  <li>
+                  <li data-tag="political">
                     <p><em>2009</em></p>
                     <p>Changed my mind and became Republican again</p>
                   </li>
@@ -103,7 +135,7 @@
                     <p><em>2002</em></p>
                     <p>Acquired the former Hotel Delmonico, which was renovated and reopened in 2004 as the Trump Park Avenue. I sure do like my surname!</p>
                   </li>
-                  <li>
+                  <li data-tag="political">
                     <p><em>2001</em></p>
                     <p>Completed Trump World Tower and joined the Democratic Party</p>
                   </li>
@@ -140,7 +172,7 @@
                   <label for="90-s" class="summary">1989-1999</label>
                   <div class ="year">
                     <ul class="timeline">
-                      <li>
+                      <li data-tag="political">
                         <p><em>1999</em></p>
                         <p>Started buying golf courses. They are very cheap, I have 18 of them now in USA and abroad! Also switched to the Reform Party that year</p>
                       </li>
@@ -176,7 +208,7 @@
                         <p><em>1988</em></p>
                         <p>Acquired the Plaza Hotel in Manhattan for $407 million, invested $50 million to restore the building and boosted it from three-star to four-star hotel (I called it "the Mona Lisa" and sold it for a lot of cash in 1995)</p>
                       </li>
-                      <li>
+                      <li data-tag="political">
                         <p><em>1987</em></p>
                         <p>Registered as a Republican</p>
                       </li>
@@ -199,7 +231,7 @@
                   <label for="70-s" class="summary">1968-1971</label>
                   <div class = "year">
                     <ul class = "timeline">
-                      <li>
+                      <li data-tag="political">
                         <p><em>1971</em></p>
                         <p>Was promoted to president of the company and renamed it The Trump Organization</p>
                       </li>
@@ -214,11 +246,11 @@
                 
                 <h3>MEDIA CAREER</h3>
                 <ul class="timeline">
-                <li>
+                <li data-tag="award">
                   <p><em>2019</em></p>
                   <p>Was awarded Worst Actor and Worst Screen Combo at Golden Raspberry Awards for parts in "Death of a Nation" and "Fahrenheit 11/9"</p>
                 </li>
-                <li>
+                <li data-tag="book">
                   <p><em>2015</em></p>
                   <p>Published a book "Crippled America: How to Make America Great Again"</p>
                 </li>
@@ -227,23 +259,26 @@
                   <label for="2011" class="summary">2011</label>
                   <div class = "year">
                     <ul class>
-                      <li>
+                      <li data-tag="book">
+                        <p><em></em></p>
                         <p>Published a book "Time to Get Tough: Making America #1 Again" in coauthorship with Wynton Hall, Peter Schweizer and Meredith McIver</p>
                       </li>
-                      <li>
+                      <li data-tag="book">
+                        <p><em></em></p>
                         <p>Published a book "Midas Touch: Why Some Entrepreneurs Get Rich – And Why Most Don't" in coauthorship with Robert Kiyosaki</p>
                       </li>
-                      <li>
+                      <li data-tag="book">
+                        <p><em></em></p>
                         <p>Published a book "Trump Tower" in coauthorship with Jeffrey Robinson</p>
                       </li>
                     </ul>
                   </div>
                 </li>
-                <li>
+                <li data-tag="book">
                   <p><em>2009</em></p>
                   <p>Published a book "Think Like a Champion: An Informal Education in Business and Life" in coauthorship with Meredith McIver</p>
                 </li>
-                <li>
+                <li data-tag="book">
                   <p><em>2008</em></p>
                   <p>Published a book "Never Give Up: How I Turned My Biggest Challenges into Success" in coauthorship with Meredith McIver</p>
                 </li>
@@ -252,10 +287,12 @@
                   <label for="2007" class="summary">2007</label>
                   <div class = "year">
                     <ul>
-                      <li>
+                      <li data-tag="book">
+                        <p><em></em></p>
                         <p>Published a book "Think Big and Kick Ass" in coauthorship with Bill Zanker</p>
                       </li>
-                      <li>
+                      <li data-tag="award">
+                        <p><em></em></p>
                         <p>Received a star on the Hollywood Walk of Fame for being producer of Miss Universe pageantn</p>
                       </li>
                     </ul>
@@ -266,16 +303,20 @@
                   <label for="2006" class="summary">2006</label>
                   <div class = "year">
                     <ul>
-                      <li>
+                      <li data-tag="book">
+                        <p><em></em></p>
                         <p>Published a book "Why We Want You to Be Rich" in coauthorship with Meredith McIver and Robert Kiyosaki</p>
                       </li>
-                      <li>
+                      <li data-tag="book">
+                        <p><em></em></p>
                         <p>Published a book "How to Build a Fortune: Your Plan for Success From the World's Most Famous Businessman"</p>
                       </li>
-                      <li>
+                      <li data-tag="book">
+                        <p><em></em></p>
                         <p>Published a book "The Best Real Estate Advice I Ever Received: 100 Top Experts Share Their Strategies"</p>
                       </li>
-                      <li>
+                      <li data-tag="book">
+                        <p><em></em></p>
                         <p>Published a book "Trump 101: The Way to Success" in coauthorship with Meredith McIver</p>
                       </li>
                     </ul>
@@ -286,16 +327,18 @@
                   <label for="2005" class="summary">2005</label>
                   <div class = "year">
                     <ul>
-                      <li>
+                      <li data-tag="book">
+                        <p><em></em></p>
                         <p>Published a book "The Best Golf Advice I Ever Received"</p>
                       </li>
-                      <li>
+                      <li data-tag="TV">
+                        <p><em></em></p>
                         <p>Performed a song with Megan Mullally at the 57th Primetime Emmy Awards</p>
                       </li>
                     </ul>
                   </div>
                 </li>
-                <li>
+                <li data-tag="TV">
                   <p><em>2004 ― 2008</em></p>
                   <p>Ran short-form talk radio program "Trumped!" (one to two minutes on weekdays)</p>
                 </li>
@@ -304,23 +347,26 @@
                   <label for="2004" class="summary">2004</label>
                   <div class = "year">
                     <ul>
-                      <li>
+                      <li data-tag="book">
+                        <p><em></em></p>
                         <p>Published a book "Trump: How to Get Rich" in coauthorship with Meredith McIver</p>
                       </li>
-                      <li>
+                      <li data-tag="book">
+                        <p><em></em></p>
                         <p>Published a book "The Way to the Top: The Best Business Advice I Ever Received"</p>
                       </li>
-                      <li>
+                      <li data-tag="book">
+                        <p><em></em></p>
                         <p>Published a book "Think Like a Billionaire: Everything You Need to Know About Success, Real Estate, and Life" in coauthorship with Meredith McIver</p>
                       </li>
                     </ul>
                   </div>
                 </li>
-                <li>
+                <li data-tag="TV">
                   <p><em>2003 ― 2015</em></p>
                   <p>Produced NBC reality shows "The Apprentice" and "The Celebrity Apprentice"</p>
                 </li>
-                <li>
+                <li data-tag="book">
                   <p><em>2000</em></p>
                   <p>Published a book "Trump: The America We Deserve" in coauthorship with Dave Shiflett</p>
                 </li>
@@ -329,19 +375,19 @@
                   <label for="90-s" class="summary">Before 2000</label>
                   <div class = "year">
                     <ul class = "timeline">
-                      <li>
+                      <li data-tag="book">
                         <p><em>1997</em></p>
                         <p>Published a book "Trump: The Art of the Comeback" in coauthorship with Kate Bohner</p>
                       </li>
-                      <li>
+                      <li data-tag="award">
                         <p><em>1991</em></p>
                         <p>Was awarded Worst Supporting Actor at Golden Raspberry Awards for a part in "Ghosts Can't Do It"</p>
                       </li>
-                      <li>
+                      <li data-tag="book">
                         <p><em>1990</em></p>
                         <p>Published a book "Trump: Surviving at the Top" in coauthorship with Charles Leerhsen</p>
                       </li>
-                      <li>
+                      <li data-tag="book">
                         <p><em>1987</em></p>
                         <p>Published a book "Trump: The Art of the Deal" in coauthorship with Tony Shwartz</p>
                       </li>
